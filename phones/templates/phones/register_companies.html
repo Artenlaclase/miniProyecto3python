@@ -1,0 +1,10 @@
+{% extends 'phones/base.html' %}
+
+{% block body %}
+    <h1>Registrar Compañias</h1>
+    <form id="companies-form" action="{% url 'register_companies' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+      <input type="submit" value="Save">
+    </form>
+{% endblock %}
